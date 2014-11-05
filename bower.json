@@ -1,0 +1,13 @@
+{
+  "name": "kurento-module-markerdetector",
+  "description": "",
+  "main": "dist/kurento-module-markerdetector.js",
+  "ignore": [
+    "doc/",
+    "lib/",
+    "package.json"
+  ],
+  "keywords": [
+    "Kurento"
+  ]
+}
