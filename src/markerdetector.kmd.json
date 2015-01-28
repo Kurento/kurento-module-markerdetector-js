@@ -1,6 +1,6 @@
 {
   "name": "markerdetector",
-  "version": "0.0.3-dev",
+  "version": "0.0.3",
   "kurentoVersion": "^5.0.0",
   "imports": [
     {
@@ -33,7 +33,7 @@
         "mavenGroupId": "org.kurento.module",
         "packageName": "org.kurento.module.markerdetector",
         "mavenArtifactId": "markerdetector",
-        "mavenVersion": "0.0.3-SNAPSHOT"
+        "mavenVersion": "0.0.3"
       }
     },
     "implementation": {
