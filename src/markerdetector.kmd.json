@@ -1,0 +1,171 @@
+{
+  "name": "markerdetector",
+  "version": "6.0.0-dev",
+  "kurentoVersion": "6.0.0-dev",
+  "imports": [
+    {
+      "name": "core",
+      "version": "6.0.0-dev",
+      "mavenVersion": "6.0.0-SNAPSHOT",
+      "npmVersion": "Kurento/kurento-client-core-js"
+    },
+    {
+      "name": "elements",
+      "version": "6.0.0-dev",
+      "mavenVersion": "6.0.0-SNAPSHOT",
+      "npmVersion": "Kurento/kurento-client-elements-js"
+    },
+    {
+      "name": "filters",
+      "version": "6.0.0-dev",
+      "mavenVersion": "6.0.0-SNAPSHOT",
+      "npmVersion": "Kurento/kurento-client-filters-js"
+    }
+  ],
+  "code": {
+    "api": {
+      "js": {
+        "nodeName": "kurento-module-markerdetector",
+        "npmDescription": "",
+        "npmVersion": "6.0.0"
+      },
+      "java": {
+        "mavenGroupId": "org.kurento.module",
+        "packageName": "org.kurento.module.markerdetector",
+        "mavenArtifactId": "markerdetector",
+        "mavenVersion": "6.0.0-SNAPSHOT"
+      }
+    },
+    "implementation": {
+      "lib": "libkmsmarkerdetector",
+      "cppNamespace": "kurento::module::markerdetector"
+    }
+  },
+  "remoteClasses": [
+    {
+      "name": "ArMarkerdetector",
+      "doc": "ArMarkerdetector interface. Documentation about the module",
+      "extends": "OpenCVFilter",
+      "constructor": {
+        "params": [
+          {
+            "name": "mediaPipeline",
+            "doc": "the parent :rom:cls:`MediaPipeline`",
+            "type": "MediaPipeline"
+          }
+        ],
+        "doc": "Create an element"
+      },
+      "methods": [
+        {
+          "params": [
+            {
+              "name": "showDebugLevel",
+              "doc": "show debug info on image",
+              "type": "int"
+            }
+          ],
+          "name": "setShowDebugLevel",
+          "doc": "TODO"
+        },
+        {
+          "params": [],
+          "return": {
+            "type": "int",
+            "doc": "show debug info on image"
+          },
+          "name": "getShowDebugLevel",
+          "doc": "TODO"
+        },
+        {
+          "params": [
+            {
+              "name": "overlayImage",
+              "doc": "TODO",
+              "type": "String"
+            }
+          ],
+          "name": "setOverlayImage",
+          "doc": "TODO"
+        },
+        {
+          "params": [],
+          "return": {
+            "type": "String",
+            "doc": "TODO"
+          },
+          "name": "getOverlayImage",
+          "doc": "TODO"
+        },
+        {
+          "params": [
+            {
+              "name": "overlayText",
+              "doc": "TODO",
+              "type": "String"
+            }
+          ],
+          "name": "setOverlayText",
+          "doc": "TODO"
+        },
+        {
+          "params": [],
+          "return": {
+            "type": "String",
+            "doc": "TODO"
+          },
+          "name": "getOverlayText",
+          "doc": "TODO"
+        },
+        {
+          "params": [
+            {
+              "name": "overlayScale",
+              "doc": "TODO",
+              "type": "float"
+            }
+          ],
+          "name": "setOverlayScale",
+          "doc": "TODO"
+        },
+        {
+          "params": [],
+          "return": {
+            "type": "float",
+            "doc": "TODO"
+          },
+          "name": "getOverlayScale",
+          "doc": "TODO"
+        }
+      ],
+      "events": [
+        "MarkerCount"
+      ]
+    }
+  ],
+  "complexTypes": [],
+  "events": [
+    {
+      "properties": [
+        {
+          "name": "markerId",
+          "doc": "marker id",
+          "type": "int"
+        },
+        {
+          "name": "markerCount",
+          "doc": "Number of visible markers with the specified id",
+          "type": "int"
+        },
+        {
+          "name": "markerCountDiff",
+          "doc": "How much the markerCount was changed from the previous situation",
+          "type": "int"
+        }
+      ],
+      "extends": "Media",
+      "name": "MarkerCount",
+      "doc": "An event that is sent when the number of visible markers is changed. Tracking coordinates for the markers is going to be sent with some other approach."
+    }
+  ]
+}
