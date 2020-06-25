@@ -1,44 +1,44 @@
 {
   "name": "markerdetector",
-  "version": "6.6.1-dev",
-  "kurentoVersion": "^6.1.0",
+  "version": "6.7.1-dev",
+  "kurentoVersion": "^6.7.0",
   "imports": [
     {
       "name": "core",
-      "version": "^6.1.0",
-      "mavenVersion": "[6.1.0,7.0.0-SNAPSHOT)",
-      "npmVersion": ">=6.1.0 <7.0.0"
+      "version": "^6.7.0",
+      "mavenVersion": "[6.7.0,7.0.0-SNAPSHOT)",
+      "npmVersion": ">=6.7.0 <7.0.0"
     },
     {
       "name": "elements",
-      "version": "^6.1.0",
-      "mavenVersion": "[6.1.0,7.0.0-SNAPSHOT)",
-      "npmVersion": ">=6.1.0 <7.0.0"
+      "version": "^6.7.0",
+      "mavenVersion": "[6.7.0,7.0.0-SNAPSHOT)",
+      "npmVersion": ">=6.7.0 <7.0.0"
     },
     {
       "name": "filters",
-      "version": "^6.1.0",
-      "mavenVersion": "[6.1.0,7.0.0-SNAPSHOT)",
-      "npmVersion": ">=6.1.0 <7.0.0"
+      "version": "^6.7.0",
+      "mavenVersion": "[6.7.0,7.0.0-SNAPSHOT)",
+      "npmVersion": ">=6.7.0 <7.0.0"
     }
   ],
   "code": {
     "api": {
-      "js": {
-        "nodeName": "kurento-module-markerdetector",
-        "npmDescription": "",
-        "npmVersion": "6.6.1"
-      },
       "java": {
         "mavenGroupId": "org.kurento.module",
-        "packageName": "org.kurento.module.markerdetector",
         "mavenArtifactId": "markerdetector",
-        "mavenVersion": "6.6.1-SNAPSHOT"
+        "mavenVersion": "6.7.1-SNAPSHOT",
+        "packageName": "org.kurento.module.markerdetector"
+      },
+      "js": {
+        "nodeName": "kurento-module-markerdetector",
+        "npmVersion": "6.7.1",
+        "npmDescription": ""
       }
     },
     "implementation": {
-      "lib": "libkmsmarkerdetector",
-      "cppNamespace": "kurento::module::markerdetector"
+      "cppNamespace": "kurento::module::markerdetector",
+      "lib": "libkmsmarkerdetector"
     }
   },
   "remoteClasses": [
