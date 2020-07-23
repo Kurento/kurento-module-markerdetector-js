@@ -1,6 +1,6 @@
 {
   "name": "kurento-module-markerdetector",
-  "version": "6.7.1-dev",
+  "version": "6.14.1-dev",
   "description": "",
   "scripts": {
     "prepublish": "grunt"
