@@ -13,7 +13,7 @@ kurento-module-markerdetector-bower
 This repository host the auto-generated JavaScript client for [Kurento]
 module "markerdetector" to be published in [Bower].
 
-Module "markerdetector" description: 
+Module "markerdetector" description: JavaScript Client API for Kurento Media Server
 
 What is Kurento
 ---------------

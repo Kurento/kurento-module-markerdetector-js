@@ -12,7 +12,7 @@ kurento-module-markerdetector-js
 
 This repository host the auto-generated JavaScript client for [Kurento] module "markerdetector".
 
-Module "markerdetector" description: 
+Module "markerdetector" description: JavaScript Client API for Kurento Media Server
 
 What is Kurento
 ---------------

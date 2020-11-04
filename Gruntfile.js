@@ -35,6 +35,12 @@ module.exports = function(grunt)
       'browser': DIST_DIR
     },
 
+    bower:
+    {
+      TOKEN:      process.env.TOKEN,
+      repository: 'Kurento/kurento-module-markerdetector-js'
+    },
+
     // Generate documentation
     jsdoc:
     {
@@ -108,14 +114,29 @@ module.exports = function(grunt)
           }
         }
       }
-    }  });
+    },
+
+    shell:
+    {
+      // Publish / update package info in Bower
+      bower: {
+        command: [
+          'curl -X DELETE "https://bower.herokuapp.com/packages/<%= pkg.name %>?auth_token=<%= bower.TOKEN %>"',
+          'node_modules/.bin/bower register <%= pkg.name %> <%= bower.repository %>',
+          'node_modules/.bin/bower cache clean'
+        ].join('&&')
+      }
+    }
+  });
 
   // Load plugins
   grunt.loadNpmTasks('grunt-browserify');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-jsdoc');
   grunt.loadNpmTasks('grunt-npm2bower-sync');
+  grunt.loadNpmTasks('grunt-shell');
 
   // Alias tasks
   grunt.registerTask('default', ['clean', 'jsdoc', 'browserify', 'sync:bower']);
+  grunt.registerTask('bower',   ['shell:bower']);
 };
